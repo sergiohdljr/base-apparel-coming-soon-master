@@ -16,6 +16,7 @@ botao.addEventListener('click',(evento)=>{
 })
 
      function Invalido(){
+
         const erro = document.createElement('span')
         erro.innerText = "Please provide a valid e-mail"
         erro.classList.add("span-erro")
@@ -27,7 +28,12 @@ botao.addEventListener('click',(evento)=>{
 
         main.appendChild(erro) 
         const email = document.querySelector(".input-value");
+
+        const errorIcon = document.createElement('img');
+        errorIcon.setAttribute("src","./images/icon-error.svg")
+        errorIcon.classList.add("icon-error");
+
+        input.insertBefore(errorIcon, input.children[1]);
         
         email.value = " "
-
     } 

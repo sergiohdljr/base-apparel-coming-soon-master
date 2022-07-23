@@ -7,6 +7,8 @@
     width: 100%;
     height: 250px;
     background-image: url('../images/hero-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .textos{
@@ -42,7 +44,7 @@
 
 .input{
     width: 80%;
-    height: 45px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,8 +72,8 @@
 .btn-input{
     width: 64px;
     height: 100%;
+    border: none;
     border-radius: 1.5rem;
-    border:none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +84,8 @@
 
 .btn-input:hover{
     width: 80px;
-    position: relative;
+    position:relative;
+    z-index: 1000;
     box-shadow: 0 20px 20px hsla(0, 80%, 86%, 0.418);
     transition: 3ms;
 }
@@ -96,3 +99,7 @@
     margin-top: 0.8rem;
     text-align: left;
 }
+
+.icon-error{
+    margin-right : 0.5rem
+}  
