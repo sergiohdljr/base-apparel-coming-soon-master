@@ -8,12 +8,9 @@ botao.addEventListener('click',(evento)=>{
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
       let validar = re.test(valorInput)
-    if (validar == true){
-        
-    }else{
-        Invalido()
-    }
+      
 })
+    
 
      function Invalido(){
 
@@ -36,4 +33,4 @@ botao.addEventListener('click',(evento)=>{
         input.insertBefore(errorIcon, input.children[1]);
         
         email.value = " "
-    } 
+    }

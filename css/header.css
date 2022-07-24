@@ -16,3 +16,24 @@ header{
 .logo-img{
     height: 100%;
 }
+
+@media (min-width: 835px){
+    header{
+        width: 100%;
+        height: 104px;
+        padding-left: 8rem;
+        justify-content: flex-start;
+        align-items: flex-end;
+        z-index: 100;
+    }
+
+    .logo{
+        width: 60%;
+        height: 40%;
+    }
+
+    .logo-img{
+        width: 164px;
+        height: 33px;
+    }
+}
