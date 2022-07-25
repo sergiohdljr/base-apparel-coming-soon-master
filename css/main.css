@@ -24,6 +24,10 @@
 .titulo-principal {
   font-size: 3rem;
   font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.8rem;
@@ -38,19 +42,21 @@
 
 .sub-titulo {
   color: var(--Desaturated-Red);
-  width: 90%;
+  width: 80%;
+  max-width: 440px;
   text-align: center;
   line-height: 1.4rem;
 }
 
 .input {
   width: 80%;
-  height: 40px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: solid 1px var(--Desaturated-Red);
   border-radius: 2rem;
+  position: relative;
 }
 
 .input-erro {
@@ -58,6 +64,7 @@
 }
 
 .input-value {
+  background-color: transparent;
   width: calc(100% - 64px);
   outline: none;
   border: none;
@@ -71,23 +78,25 @@
 }
 
 .btn-input {
-  width: 64px;
+  width: 70px;
+  padding: 15px;
   height: 100%;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   box-shadow: 0 20px 13px hsla(0, 80%, 86%, 0.418);
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0; 
 }
 
 .btn-input:hover {
-  width: 80px;
-  position: relative;
+  opacity: 0.4;
   z-index: 1000;
-  box-shadow: 0 20px 20px hsla(0, 80%, 86%, 0.418);
   transition: 3ms;
 }
 
@@ -105,15 +114,20 @@
   margin-right: 0.5rem;
 }
 
-@media (min-width: 835px) {
+@media(max-width:375px){
+  .sub-titulo{
+    width: 90%;
+  }
+}
+@media (min-width: 576px) {
   .principal {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-end;
+    justify-content:flex-end;
   }
 
   .banner {
-    width: 46%;
+    width: 40%;
     height: 762px;
     background-image: url("../images/hero-desktop.jpg");
     background-position: center;
@@ -124,24 +138,40 @@
   }
 
   .textos {
-    width: 54%;
+    width: 60%;
     height: calc(100% - 104px);
-    padding-left: 8rem;
-    align-items: flex-start;
-    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
   }
 
   .titulo-principal {
-    font-size: 4.5rem;
-    text-align: left;
+    align-items: flex-start;
+    width: 80%;
+    font-size: 3rem;
   }
 
   .sub-titulo {
+    width: 80%;
     text-align: left;
-    width: 63%;
+  }
+  
+  .input{
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .titulo-principal {
+    max-width: 440px;
+    font-size: 4.3rem;
   }
 
-  .input {
-    width: 60%;
+  .sub-titulo{
+    max-width: 440px;
+  }
+
+  .input{
+    max-width: 440px;
   }
 }

@@ -15,9 +15,12 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-@media (min-width: 660px) {
-  body,
-  html {
+@media (min-width: 576px){
+  body{
     overflow-y: hidden;
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-size: 60%;
+
   }
+
 }
