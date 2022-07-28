@@ -9,14 +9,15 @@
   background-image: url("../images/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: none;
 }
 
 .textos {
   width: 100%;
-  height: calc(100% - 300px);
+  height: calc(100% - 350px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 1.5rem;
 }
@@ -48,15 +49,23 @@
   line-height: 1.4rem;
 }
 
-.input {
+.formulario{
   width: 80%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input {
+  width: 100%;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: solid 1px var(--Desaturated-Red);
   border-radius: 2rem;
-  position: relative;
 }
 
 .input-erro {
@@ -86,12 +95,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   box-shadow: 0 20px 13px hsla(0, 80%, 86%, 0.418);
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0; 
+  cursor: pointer; 
 }
 
 .btn-input:hover {
@@ -104,20 +111,33 @@
   display: block;
   width: 100%;
   color: red;
-  padding-left: 3.4rem;
   font-size: 14px;
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
   text-align: left;
+  margin-left: 2rem;
 }
 
 .icon-error {
   margin-right: 0.5rem;
 }
 
-@media(max-width:375px){
+@media(min-width:375px){
   .sub-titulo{
     width: 90%;
   }
+
+  .formulario{
+    width: 100%;
+  }
+
+  .input{
+    width: 80%;
+  }
+
+  .span-erro {
+  width: 80%;
+}
+
 }
 @media (min-width: 576px) {
   .principal {
@@ -128,19 +148,20 @@
 
   .banner {
     width: 40%;
-    height: 762px;
+    height: 100vh;
     background-image: url("../images/hero-desktop.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
     top: 0;
     right: 0;
+    
   }
 
   .textos {
     width: 60%;
-    height: calc(100% - 104px);
-    justify-content: center;
+    height: calc(100% - 220px);
+    justify-content: flex-end;
     align-items: center;
     gap: 3rem;
   }
@@ -156,11 +177,20 @@
     text-align: left;
   }
   
-  .input{
+  .formulario{
     width: 80%;
   }
+
+  .input{
+    width: 100%;
+  }
+
+  .span-erro {
+  width: 90%;
+  margin-left: 1px;
 }
 
+}
 @media (min-width: 768px) {
   .titulo-principal {
     max-width: 440px;
@@ -171,7 +201,16 @@
     max-width: 440px;
   }
 
-  .input{
+  .formulario{
     max-width: 440px;
   }
+
+  .input{
+    width: 100%;
+  }
+
+  .span-erro {
+  width: 95%;
+  margin-left: 1rem;
+}
 }
